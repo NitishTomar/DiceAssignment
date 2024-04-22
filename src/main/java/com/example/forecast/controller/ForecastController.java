@@ -19,7 +19,7 @@ public class ForecastController {
     private ForecastService forecastService;
     private static final Logger logger = LoggerFactory.getLogger(ForecastController.class);
 
-    @GetMapping("forecast/{locationName}/summary")
+    @GetMapping("/forecast/{locationName}/summary")
     public ResponseEntity<ForecastResponse> getForecastByLocation(@RequestHeader("RapidApplicationKey") String applicationKey, @PathVariable String locationName){
         ForecastResponse forecastResponse = forecastService.getHourlyForecastByLocation(applicationKey, locationName);
         logger.info("Forecast values for location : {}", forecastResponse.getLocationName());

@@ -24,13 +24,16 @@ dependencyManagement {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-client'
-	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign' // Replace with the latest version
 	implementation 'org.slf4j:slf4j-api:1.7.32'
 	implementation 'ch.qos.logback:logback-classic:1.2.6'
-
+	implementation group: 'com.h2database', name: 'h2'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.7.9'
 
 
 
